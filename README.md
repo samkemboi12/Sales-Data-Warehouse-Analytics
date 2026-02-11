@@ -1,7 +1,7 @@
 # Sales-Data-Warehouse-Analytics
 This project explores sales performance using a dimensional data warehouse that consist of dimension tables and fact table
 View Dashboard- https://public.tableau.com/app/profile/samwel.kipkemboi/viz/Dashboard_17707214471830/Dashboard
-<img width="1141" height="582" alt="Dashboard" src="https://github.com/user-attachments/assets/4bcf85a1-b2d3-4cf1-86ec-e71303688121" />
+<img width="800" height="582" alt="Dashboard" src="https://github.com/user-attachments/assets/4bcf85a1-b2d3-4cf1-86ec-e71303688121" />
 
 ##  Overview
 
