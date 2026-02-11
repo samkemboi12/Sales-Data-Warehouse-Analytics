@@ -1,6 +1,6 @@
 # Sales-Data-Warehouse-Analytics
 This project explores sales performance using a dimensional data warehouse that consist of dimension tables and fact table
-Got you — and you’re right. A README is **not** a dump of SQL queries
+View Dashboard- https://public.tableau.com/app/profile/samwel.kipkemboi/viz/Dashboard_17707214471830/Dashboard
 
 ##  Overview
 
@@ -18,9 +18,9 @@ The goal is to support **business decision-making and dashboard development** us
 
 ---
 
-# 💰 Revenue Performance
+# Revenue Performance
 
-### 1️⃣ Total Sales
+###  Total Sales
 
 Used to understand overall business performance.
 
@@ -29,7 +29,7 @@ SELECT SUM(sales_amount) AS total_sales
 FROM gold.fact_table;
 ```
 
-### 2️⃣ Sales Trend Over Time
+### Sales Trend Over Time
 
 Shows whether the business is growing, stagnating, or declining.
 
@@ -44,9 +44,9 @@ ORDER BY year;
 
 ---
 
-# 👥 Customer Insights
+#  Customer Insights
 
-### 3️⃣ Unique Customers
+###  Unique Customers
 
 Measures market reach and customer base size.
 
@@ -55,7 +55,7 @@ SELECT COUNT(DISTINCT customer_key) AS total_customers
 FROM gold.fact_table;
 ```
 
-### 4️⃣ Top Customers by Revenue
+### Top Customers by Revenue
 
 Identifies high-value customers for retention strategies.
 
@@ -70,7 +70,7 @@ GROUP BY c.customer_id
 ORDER BY total_sales DESC;
 ```
 
-### 5️⃣ Repeat vs One-Time Customers
+### Repeat vs One-Time Customers
 
 Helps evaluate loyalty and customer retention.
 
@@ -96,9 +96,9 @@ GROUP BY
 
 ---
 
-# 📦 Product Performance
+# Product Performance
 
-### 6️⃣ Top Products by Revenue
+### Top Products by Revenue
 
 Shows which products drive the business.
 
@@ -113,7 +113,7 @@ GROUP BY p.product_name
 ORDER BY total_sales DESC;
 ```
 
-### 7️⃣ Sales by Category
+### Sales by Category
 
 Used for product strategy and inventory planning.
 
@@ -129,10 +129,9 @@ ORDER BY total_sales DESC;
 ```
 
 ---
+# Profitability Analysis
 
-# 📈 Profitability Analysis
-
-### 8️⃣ Gross Profit
+### Gross Profit
 
 Determines actual earnings after product costs.
 
@@ -146,7 +145,7 @@ JOIN gold.fact_table f
 GROUP BY p.product_name;
 ```
 
-### 9️⃣ Products with Negative Margins
+### Products with Negative Margins
 
 Highlights loss-making products requiring pricing review.
 
@@ -163,9 +162,9 @@ HAVING SUM(f.sales_amount - f.quantity * p.product_cost) < 0;
 
 ---
 
-# ⏱️ Operations Insight
+# Operations Insight
 
-### 🔟 Average Delivery Delay
+### Average Delivery Delay
 
 Measures logistics efficiency.
 
@@ -179,7 +178,7 @@ WHERE shipping_date IS NOT NULL
 
 ---
 
-# 🎯 Key Business Questions Answered
+# Key Business Questions Answered
 
 This analysis helps answer:
 
@@ -191,8 +190,7 @@ This analysis helps answer:
 * How efficient is delivery?
 
 ---
-
-# 🛠️ Tools Used
+# Tools Used
 
 * SQL Server
 * Star schema data warehouse
